@@ -1,0 +1,49 @@
+
+
+type Query {
+  getForm(id: ID!): Form
+  getAllForms: [Form]
+}
+
+
+type Mutation {
+  createForm(input: FormInput!): Form
+}
+
+
+type Form {
+  id: ID!
+  title: String!
+  fields: [FormField!]!
+}
+
+type FormField {
+  label: String!
+  type: String!
+  required: Boolean!
+  validationRules: [ValidationRule!]!
+}
+
+type ValidationRule {
+  type: String!
+  value: String!
+}
+
+
+
+input FormInput {
+  title: String!
+  fields: [FormFieldInput!]!
+}
+
+input FormFieldInput {
+  label: String!
+  type: String!
+  required: Boolean!
+  validationRules: [ValidationRuleInput]
+}
+
+input ValidationRuleInput {
+  type: String!
+  value: String!
+}

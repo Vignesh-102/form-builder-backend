@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  formbuilder-backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: formbuilder-backend
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATA_MONGODB_URI: mongodb+srv://vignesh:Viki%40MDB@cluster0.79vxq.mongodb.net/formbuilder

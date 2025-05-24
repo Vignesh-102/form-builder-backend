@@ -1,13 +1,11 @@
 package com.asm.formbuilder;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
-class FormBuilderApplicationTests {
+class FormBuilderApplicationTest {
 
 	@Test
-	void contextLoads() {
+	void mainMethodRunsWithoutErrors() {
+		FormBuilderApplication.main(new String[] {});
 	}
-
 }
