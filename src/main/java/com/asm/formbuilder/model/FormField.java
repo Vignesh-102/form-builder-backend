@@ -1,6 +1,5 @@
 package com.asm.formbuilder.model;
 
-import com.asm.formbuilder.model.ValidationRule;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
